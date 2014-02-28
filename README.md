@@ -59,3 +59,10 @@ time, your decoded audio samples will be available at `loader.response`. If
 that URL. If `src` was a list of strings, `response` will be a list of
 AudioBuffer objects, where `src[0]` will correspond to `response[0]`, `src[1]`
 will correspond to `response[1]`, and so forth.
+
+## Acknowledgements
+
+Special thanks to [HTML5Rocks](http://www.html5rocks.com/en/tutorials/webaudio/intro/)
+for being ahead of the curve with WebAudio API documentation. Also, they made
+[a similar class](http://www.html5rocks.com/en/tutorials/webaudio/intro/js/buffer-loader.js)
+as a part of their tutorial.
