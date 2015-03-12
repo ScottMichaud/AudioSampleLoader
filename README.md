@@ -10,7 +10,7 @@ XMLHttpRequest Level 2. It is asynchronous.
 
 `var loader = new AudioSampleLoader();`
 
-This document will assume that your instance is a variable called `loader. Like
+This document will assume that your instance is a variable called `loader`. Like
 always, you are free to name it whatever you want (or even have multiple
 instances active, each with its own variable name).
 
