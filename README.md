@@ -24,9 +24,9 @@ or
 
 `loader.src = ['audio/file1.mp3', 'audio/file2.mp3', 'sounds/filec.mp3'];`
 
-`ctx` (required) is your WebAudio context that will perform the actual decode.
-Note: In the future, this might be made optional. If so, and if it is not
-provided a valid WebAudio context, it will create one.
+`ctx` (optional) is your WebAudio context that will perform the actual decode.
+If it is not provided, one will be created on `send()`. If it exists but is not
+an `AudioContext`, an error will be thrown and the function will terminate.
 
 `loader.ctx = yourAudioContext;`
 
