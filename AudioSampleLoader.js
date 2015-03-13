@@ -20,7 +20,7 @@
 * Basically, imagine it like XMLHttpRequest for loading WebAudio samples.
 *
 * @author Scott Michaud
-* @version 0.1
+* @version 0.2
 */
 
 function AudioSampleLoader() {
@@ -33,11 +33,9 @@ AudioSampleLoader.prototype.send = function () {
   var console = window.console,
     i;
   if (!this.hasOwnProperty('ctx')) {
-    //TODO: Consider making optional: use new ctx, no error.
-    console.error('AudioSampleLoader: AudioContext ctx does not exist');
-    return;
+    this.ctx = new window.AudioContext();
   } else if (!(this.ctx instanceof window.AudioContext)) {
-    //TODO: Consider posting an error and using a new ctx.
+    //TODO: Post an error, but do not overwrite the variable with a valid context.
     console.error('AudioSampleLoader: ctx not an instance of AudioContext');
     return;
   }
