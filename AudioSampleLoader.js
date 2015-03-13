@@ -23,6 +23,9 @@
 * @version 0.2
 */
 
+//Forward-declare AudioContext for Safari and older Google Chrome.
+window.AudioContext = window.AudioContext || window.webkitAudioContext;
+
 function AudioSampleLoader() {
   "use strict";
   this.loaded = 0;
